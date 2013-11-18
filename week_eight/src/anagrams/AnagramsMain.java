@@ -6,7 +6,7 @@ public class AnagramsMain {
 
 	public static void main(String[] args) {
 		
-		ArrayList<String> wordsArray = Anagrams.create("congratulations");
+		ArrayList<String> wordsArray = Anagrams.create("abc");
 		print(wordsArray);
 
 	}

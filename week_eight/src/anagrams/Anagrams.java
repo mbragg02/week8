@@ -19,6 +19,8 @@ public class Anagrams {
 
 	private static void create(String prefix, String str) {
 	    int n = str.length();
+	    
+	    
 	    if (n == 1)  {
 	    	wordsArray.add(prefix + str);
 //	    	System.out.println(prefix + str);
