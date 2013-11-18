@@ -5,6 +5,21 @@ import java.util.List;
 
 public class Quicksort {
 	
+	public static List<Integer> sort (List<Integer> inputList) {		
+		
+		int size = inputList.size();
+		List<Integer> list = copy(inputList, 0, size);
+	
+		if (list.size() < 2) {
+			return list;
+		}
+		
+		list = quickSort(list);
+		
+		return list;
+
+	}
+	
 	private static List<Integer> copy(List<Integer> list, int from, int too) {
 		List<Integer> subList = new ArrayList<Integer>();
 
@@ -38,20 +53,7 @@ public class Quicksort {
 	
 
 	
-	public static List<Integer> sort (List<Integer> inputList) {		
-		
-		int size = inputList.size();
-		List<Integer> list = copy(inputList, 0, size);
-	
-		if (list.size() < 2) {
-			return list;
-		}
-		
-		list = quickSort(list);
-		
-		return list;
 
-	}
 	
 	
 	private static List<Integer> quickSort (List<Integer> list) {
@@ -61,7 +63,7 @@ public class Quicksort {
 		}
 		
 		int pivot = list.get(0);
-				
+						
 		// Divide Stage
 		List<Integer> firstHalf = lowerSublist(list, pivot);
 		List<Integer> secondHalf = higherSublist(list, pivot);
