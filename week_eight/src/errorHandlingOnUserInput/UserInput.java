@@ -11,7 +11,7 @@ public class UserInput {
 		int input = 0;
 		while (!in.hasNextInt()) {
 			System.out.println("That is not a nunber!");
-			System.out.println("Please enter a numer: ");
+			System.out.print("Please enter a numer: ");
 			in.next();
 		}
 		input = in.nextInt();
@@ -25,11 +25,11 @@ public class UserInput {
 		int total = 0;
 		
 		
-		System.out.println("How many numbers would you like to enter?:");
+		System.out.print("How many numbers would you like to enter?: ");
 		int numberOFInputs = input(in);
 
 		do {
-			System.out.println("Please enter a numer: ");
+			System.out.print("Please enter a numer: ");
 			int input = input(in);
 			intList.add(input);
 			
