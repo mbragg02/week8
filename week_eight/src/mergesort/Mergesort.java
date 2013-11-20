@@ -6,21 +6,6 @@ import java.util.List;
 public class Mergesort {
 
 	
-	
-	
-	private static List<Integer> copy(List<Integer> list, int from, int too) {
-		List<Integer> subList = new ArrayList<Integer>();
-
-		for (int i = from; i < too; i++) {
-			subList.add(list.get(i));
-		}
-		return subList;
-	}
-	
-	
-	
-	
-	
 	public static List<Integer> sort (List<Integer> inputList) {		
 		
 		int size = inputList.size();
@@ -35,6 +20,15 @@ public class Mergesort {
 
 	}
 	
+	private static List<Integer> copy(List<Integer> list, int from, int too) {
+		List<Integer> subList = new ArrayList<Integer>();
+
+		for (int i = from; i < too; i++) {
+			subList.add(list.get(i));
+		}
+		return subList;
+	}
+	
 	
 	private static List<Integer> mergeSort (List<Integer> list) {
 		
@@ -42,23 +36,18 @@ public class Mergesort {
 			return list;
 		}
 		
-		int middleValue = list.get(list.size() / 2);
 		int middleIdx = list.size() / 2;
-//		System.out.println("Middle: " + middleValue);
-//		System.out.println("Size: " + list.size() );
-		
-
 		
 		// Divide stage
 		List<Integer> firstHalf = copy(list, 0, middleIdx);
 		List<Integer> secondHalf = copy(list, middleIdx, list.size());
 	
 		List<Integer> sortedLeft = mergeSort(firstHalf);
-		List<Integer> sortedRight = mergeSort(secondHalf);
-		
+		List<Integer> sortedRight = mergeSort(secondHalf);		
 		
 		
 		// Intergration stage
+		
 		List<Integer> result = new ArrayList<Integer>(); 
 
 		
