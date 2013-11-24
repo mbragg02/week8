@@ -17,7 +17,6 @@ public class Mergesort {
 		list = mergeSort(list);
 		
 		return list;
-
 	}
 	
 	private static List<Integer> copy(List<Integer> list, int from, int too) {
